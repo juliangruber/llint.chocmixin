@@ -1,6 +1,12 @@
 {
   "name": "llint.chocmixin",
   "version": "0.0.1",
+  "description": "llint your less & css",
+  "main": "init.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juliangruber/llint.chocmixin.git"
+  },
   "dependencies": {
     "llint": "*"
   }
