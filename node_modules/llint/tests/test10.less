@@ -1,0 +1,36 @@
+/* Hello, I am Patternscout Next */
+/* And this is my main CSS file. */
+
+@font-face {
+  font-family: 'DINComp';
+  src: url('fonts/DINComp.eot#iefix') format('embedded-opentype'), url('fonts/DINWeb.woff') format('woff'), url('fonts/DINComp.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'DINBold';
+  src: url('fonts/DINComp-Bold.eot#iefix') format('embedded-opentype'), url('fonts/DINWeb-Bold.woff') format('woff'), url('fonts/DINComp-Bold.ttf') format('truetype')
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.app {
+  margin: 0px auto;
+  background-color: #ccc;
+  position: relative;
+  .grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(grid.png);
+    z-index: 9999;
+    opacity: 0.25;
+    text-indent: -9999px;
+    display: none;
+  }
+}

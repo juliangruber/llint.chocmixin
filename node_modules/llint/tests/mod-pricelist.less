@@ -1,0 +1,211 @@
+/* @group Marketoverview */
+
+.pricelist {
+    background: #2e2d2b;
+    height: 100%;
+    .bg {
+    	bottom: -20px;
+    	overflow-x: auto;
+    	overflow-y: hidden;
+    	position: absolute;
+    	top: 0;
+    	width: 100%;
+    }
+    .list {
+        border-bottom: 1px solid #3a3937;
+        min-width: 100%;
+        width: 100%;
+        th,td {
+        	.bordered(1px solid #3a3937, none, 1px solid #161614, none);
+        }
+        thead {
+        	th {
+        		color: #666;
+        		cursor: default;
+        		font-size: 11px;
+        		line-height: 20px;
+        		min-width: 30px;
+        		padding: 3px 12px;
+        		text-align: right;
+        		white-space: nowrap;
+        		&.name {
+        			text-align: left;
+        			a.icon.sort {
+        				margin: 0 -5px 0 5px;
+        			}
+        		}
+        		&:hover {
+        			background: #383838;
+        		}
+        		a.icon.sort {
+        			background: url(/v/i/iconsprite.png) -11px -998px no-repeat;
+        			display: inline-block;
+        			height: 20px;
+        			margin: 0 5px 0 -5px;
+        			text-align: left;
+        			text-indent: -9999px;
+        			visibility: hidden;
+        			width: 10px;
+        		}
+        		&.asc a.icon.sort {
+        			background-position: -41px -997px;
+        			visibility: visible;
+        		}
+        		&.desc a.icon.sort {
+        			visibility: visible;
+        		}
+        		sub {
+        			font-size: 8px;
+        			position: relative;
+        			top: 3px;
+        		}
+        		&:hover a.icon.sort {
+        			visibility: visible;
+        		}
+        		&.value {
+        			text-align: right;
+        		}
+        	}
+        }
+        tr {
+	        .name.ui-draggable:hover {
+	        	.box-shadow(inset 0 0 0 2px rgba(255,255,255,0.5));
+	        }
+	        td {
+	            color: #fff;
+	            font-size: 13px;
+	            line-height: 16px;
+	            padding: 8px 12px 6px;
+	            text-align: right;
+	            vertical-align: top;
+	            &.name {
+	                text-align: left;
+	                white-space: nowrap;
+	                width: 130px;
+	                > span { 
+	                	display: block;
+	                    overflow: hidden;
+	                    text-align: left;
+	                    text-overflow: ellipsis;
+	                    width: 130px;
+	                }
+	                .nobreak {
+	                    height: 16px;
+	                    text-overflow: ellipsis;
+	                    white-space: nowrap;
+	                }
+	            }
+	            &.barometer {
+	                text-align: right;
+	            }
+	            span {
+	                text-align: right;
+	                white-space: nowrap;
+	            }
+	            .small {
+	                color: #999999;
+	                display: block;
+	                font-size: 11px;
+	                line-height: 13px;
+	            }
+	            &.tendencyUp,
+	            .tendencyUp,
+	            .up {
+	                color: @up !important;
+	            }
+	            &.tendencyDown,
+	            .tendencyDown,
+	            .down {
+	                color: @down !important;
+	            }
+	        }
+        }
+    }
+    .up td {
+        background: #2E352C;
+    }
+    .down td {
+        background: #362D2C;
+    }
+    &.topsflops thead th {
+    	background: none !important;
+    	text-align: left;
+    }
+}
+.pricelist.topsflops .bg {
+	top: 19px;
+}
+
+.infograph {
+	background-color: #000;
+	border-bottom: 1px solid #000;
+	border-right: 0px solid #000;
+	height: 16px;
+	padding: 1px;
+	width: 100%;
+	td {
+		.text-shadow(0 1px 0 #000);
+		color: #444;
+		font-family: DINBold;
+		font-size: 10px;
+		line-height: 16px;
+		padding: 0 2px;
+		text-align: center;
+		&.green {
+			background-color: #2E352C;
+			color: @up;
+		}
+		&.red {
+			background-color: #362D2C;
+			color: @down;
+		}
+		&.grey {
+			background-color: black;
+		}
+	}
+}
+
+.barometertable {
+	dl {
+		.box-sizing(border-box);
+		padding: 12px;
+		width: 100%;
+		dt {
+			clear: both;
+			float: left;
+			line-height: 16px;
+			min-width: 60px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 30%;
+			span {
+				display: block;
+				line-height: 18px;
+				padding: 0 12px 0 0;
+			}
+		}
+		dd {
+			float: right;
+			min-width: 140px;
+			width: 70%;
+		}
+	}
+}
+
+.empty {
+	.text-shadow(0 1px 0 #000);
+	bottom: 0;
+	color: #666;
+	font-size: 16px;
+	left: 0;
+	padding: 72px 36px 36px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	img {
+		margin: 24px auto 0;
+	}
+}
+    
+/* @end */
