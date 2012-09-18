@@ -5,6 +5,6 @@ Hooks.addMenuItem('Actions/CSS/LLint', 'cmd-alt-l', lintText);
 
 function lintText() {
   Recipe.run(function(r) {
-    r.text(llint(r.text()));
+    r.text = llint(r.text);
   });
 }
